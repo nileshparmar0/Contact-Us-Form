@@ -1,0 +1,275 @@
+/* Apply box-sizing: border-box to all elements and pseudo-elements for consistent sizing */
+*, *:before, *:after {
+    box-sizing: border-box;
+    /* Improve font rendering for smoother appearance */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+/* General body styling */
+body {
+    /* Set background color */
+    background-color: #A4EAFF;
+    /* Set base font size */
+    font-size: 12px;
+}
+  
+/* Apply font styles to body, button, and input elements */
+body, button, input {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+  
+/* Styling for the background container */
+.background {
+    display: flex;
+    min-height: 100vh; /* Full viewport height */
+}
+  
+/* Main container styling */
+.container {
+    flex: 0 1 700px; /* Flexible width with a max of 700px */
+    margin: auto; /* Center the container */
+    padding: 10px; /* Padding around the container */
+}
+  
+/* Styling for the screen element */
+.screen {
+    position: relative;
+    background: white;
+    border-radius: 15px; /* Rounded corners */
+}
+  
+/* Add a shadow effect to the screen */
+.screen:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .4); /* Shadow effect */
+    z-index: -1; /* Place behind the screen */
+}
+  
+/* Styling for the screen header */
+.screen-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #ed1c6f; /* Header background color */
+    border-top-left-radius: 15px; /* Rounded top corners */
+    border-top-right-radius: 15px;
+}
+  
+/* Left side of the screen header */
+.screen-header-left {
+    margin-right: auto; /* Push content to the left */
+}
+  
+/* Buttons in the screen header */
+.screen-header-button {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 3px;
+    border-radius: 8px; /* Circular buttons */
+    background: white;
+}
+  
+/* Different colors for the control buttons */
+.screen-header-button.close {
+    background: blue;
+}
+.screen-header-button.maximize {
+    background: #e8e925;
+}
+.screen-header-button.minimize {
+    background: #74c54f;
+}
+  
+/* Right side of the screen header */
+.screen-header-right {
+    display: flex; /* Align items horizontally */
+}
+  
+/* Ellipsis in the right side of the screen header */
+.screen-header-ellipsis {
+    width: 3px;
+    height: 3px;
+    margin-left: 2px;
+    border-radius: 8px; /* Circular shape */
+    background: white;
+}
+  
+/* Main body of the screen */
+.screen-body {
+    display: flex;
+}
+  
+/* Items inside the screen body */
+.screen-body-item {
+    flex: 1; /* Equal flex for all items */
+    padding: 50px; /* Padding inside each item */
+}
+  
+/* Left item in the screen body */
+.screen-body-item.left {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+}
+  
+/* Title styling */
+.app-title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #ea1d6f; /* Title color */
+    font-size: 26px; /* Font size for the title */
+}
+  
+/* Decorative line under the title */
+.app-title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 25px;
+    height: 4px;
+    background: #ea1d6f; /* Color of the line */
+}
+  
+/* Contact information styling */
+.app-contact {
+    margin-top: auto; /* Push to the bottom */
+    font-size: 8px; /* Small font size */
+    color: #ed1c6f; /* Contact text color */
+}
+  
+/* Form group styling */
+.app-form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+  
+/* Additional margin for the message group */
+.app-form-group.message {
+    margin-top: 40px;
+}
+  
+/* No margin for the button group */
+.app-form-group.buttons {
+    margin-bottom: 0;
+    text-align: right; /* Align buttons to the right */
+}
+  
+/* Form control styling */
+.app-form-control {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ed1c6f; /* Bottom border for input */
+    color: #ddd; /* Input text color */
+    font-size: 14px; /* Input font size */
+    text-transform: uppercase; /* Uppercase text */
+    outline: none;
+    transition: border-color .2s; /* Smooth border transition */
+}
+  
+/* Placeholder text color */
+.app-form-control::placeholder {
+    color: #ed1c6f; /* Placeholder color */
+}
+  
+/* Border color change on focus */
+.app-form-control:focus {
+    border-bottom-color: #ed1c6f;
+}
+  
+/* Button styling */
+.app-form-button {
+    background: none;
+    border: none;
+    color: #ea1d6f; /* Button text color */
+    font-size: 14px;
+    cursor: pointer; /* Pointer cursor on hover */
+    outline: none;
+}
+  
+/* Button hover effect */
+.app-form-button:hover {
+    color: #b9134f; /* Darker color on hover */
+}
+  
+/* Credits section styling */
+.credits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: #ffa4bd; /* Text color */
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px; /* Font size */
+    font-weight: normal;
+}
+  
+/* Credits link styling */
+.credits-link {
+    display: flex;
+    align-items: center;
+    color: #fff; /* Link text color */
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+}
+  
+/* Dribbble icon styling */
+.dribbble {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px; /* Space around the icon */
+}
+  
+/* Responsive design for screens smaller than 520px */
+@media screen and (max-width: 520px) {
+    /* Stack screen body items vertically */
+    .screen-body {
+        flex-direction: column;
+    }
+  
+    /* Add margin to the bottom of the left item */
+    .screen-body-item.left {
+        margin-bottom: 30px;
+    }
+  
+    /* Align title elements in a row */
+    .app-title {
+        flex-direction: row;
+    }
+  
+    /* Add margin between title elements */
+    .app-title span {
+        margin-right: 12px;
+    }
+  
+    /* Hide decorative line under the title */
+    .app-title:after {
+        display: none;
+    }
+}
+  
+/* Responsive design for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    /* Reduce padding inside the screen body */
+    .screen-body {
+        padding: 40px;
+    }
+  
+    /* Remove padding inside screen body items */
+    .screen-body-item {
+        padding: 0;
+    }
+}
